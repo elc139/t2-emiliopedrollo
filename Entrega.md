@@ -42,5 +42,5 @@ Nome: Emílio B. Pedrollo
 
 [accel]: https://latex.codecogs.com/png.latex?%5Csmall%20%5Cfrac%7B4740000%7D%7B2374000%7D%20%5Ccong%202
 [accel_12_threads]: https://latex.codecogs.com/png.latex?%5Csmall%20%5Cfrac%7B4740000%7D%7B627000%7D%20%5Ccong%207%2C59
-[threads_distribution]: https://latex.codecogs.com/png.latex?%5Csmall%20%5Cfrac%7B1000000%7D%7Bnthreads%7D
+[threads_distribution]: https://latex.codecogs.com/png.latex?%5Cinline%20%5Csmall%20%5Cfrac%7B1000000%7D%7Bnthreads%7D
 [accel_graph]: https://github.com/elc139/t2-emiliopedrollo/blob/master/www/Acelera%C3%A7%C3%A3o.png?raw=true
