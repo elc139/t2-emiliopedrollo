@@ -40,7 +40,38 @@ Nome: Emílio B. Pedrollo
     >
     > Desta forma o programa `pthreads_dotprod2` não calculará o valor esperado quando a situação acima ocorrer.
 
+### OpenMP
+
+Utilizando o mesmo critério de avaliação é possivel ver que o desempenho do OpenMP esteve em média sempre alguns 
+milissegundos acima da implementação usando pthreads. No entando a implementação é muito mais fácil e de simples
+entendimento do que sua contraparte. Isso se da muito provavelmente por conte de algum overhead que a biblioteca
+OpenMP adiciona na criação de cada thread, uma vez que o OpenMP nada mais é do que um facilitador par utilização
+do POSIX pthreads, utilizando este por _debaixo dos panos_:
+
+![Posix Threads vs. OpenMP][posix_v_openmp]
+
+---
+
+#### Nota: 
+Todos os testes foram feitos utilizando o script `loop.sh` com uma versão modificada dos programas que apenas
+imprime na tela o tempo de execução:
+```
+@@ -129,8 +129,7 @@
+    end_time = wtime();
+
+    // Mostra resultado e estatisticas da execucao
+-   printf("%f\n", dotdata.c);
+-   printf("%d thread(s), %ld usec\n", nthreads, (long) (end_time - start_time));
++   printf("%ld", (long) (end_time - start_time));
+    fflush(stdout);
+
+    free(dotdata.a);
+```  
+Desta forma foi possível automatizar o processo de coleta das médias dos tempos para cada configuração de numero
+de threads e tamanho de vetor. 
+
 [accel]: https://latex.codecogs.com/png.latex?%5Csmall%20%5Cfrac%7B4740000%7D%7B2374000%7D%20%5Ccong%202
 [accel_12_threads]: https://latex.codecogs.com/png.latex?%5Csmall%20%5Cfrac%7B4740000%7D%7B627000%7D%20%5Ccong%207%2C59
 [threads_distribution]: https://latex.codecogs.com/png.latex?%5Cinline%20%5Csmall%20%5Cfrac%7B1000000%7D%7Bnthreads%7D
 [accel_graph]: https://github.com/elc139/t2-emiliopedrollo/blob/master/www/Acelera%C3%A7%C3%A3o.png?raw=true
+[posix_v_openmp]: https://github.com/elc139/t2-emiliopedrollo/blob/master/www/posixvopenmp.png?raw=true
