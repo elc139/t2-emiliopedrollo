@@ -1,0 +1,4 @@
+Processador: Intel(R) Core(TM) i7-5820K CPU @ 3.30GHz, 3301 Mhz, 6 Núcleos, 12 Processadores Lógicos
+Memória: 16 GB 1600 MHz DDR4 SDRAM Quad Channel (4+4+4+4)
+OS: Microsoft Windows 10 Professional (x64) Build 18362.720 (1903/May 2019 Update)
+Compilador: MinGW / WSL
